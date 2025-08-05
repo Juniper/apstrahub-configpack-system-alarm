@@ -1,4 +1,4 @@
-# System Uptime Config Pack
+# System Alarm Config Pack
 
 ## What does this Config Pack Do
 
@@ -11,8 +11,8 @@ This Config Pack will work with version 21.2r2+ on JunOS families junos, junos-e
 
 | Component | Name          | Description                                                             |
 |-----------|---------------|-------------------------------------------------------------------------|
-|Service Registry | System_Alarms | Service description for the System Uptime collector                     |
-|Custom Collector| System_Alarms | Custom Collector that reads the last reboot time                        |
-|Probe| System_Alarms | Probe that consumes the collector output has stages for different times |
+|Service Registry | System_Alarms | Service description for the System Alarm collector                      |
+|Custom Collector| System_Alarms | Custom Collector that reads the System Alarms                           |
+|Probe| System_Alarms | Probe that consumes the collector output  |
 |Dashboard| System Alarms | Dashboard that consumes the Probe                                       |                                              |
 
