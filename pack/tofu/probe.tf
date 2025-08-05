@@ -12,7 +12,7 @@ resource "apstra_raw_json" "probe" {
           "name": "System_Alarms",
           "type": "extensible_data_collector",
           "properties": {
-            "service_name": "System_Alarms",
+            "service_name": "System_Alarms_${var.blueprint_id}",
             "service_interval": "60",
             "value_map": {
               "value": {

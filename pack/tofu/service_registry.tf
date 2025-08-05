@@ -1,6 +1,6 @@
 resource "apstra_raw_json" "service_registry" {
   url = "/api/telemetry-service-registry"
-  id = "System_Alarms"
+  id = "System_Alarms_${var.blueprint_id}"
   payload = jsonencode(
     {
       description        = "Alarms service registry"
@@ -27,7 +27,7 @@ resource "apstra_raw_json" "service_registry" {
           ],
           type = "object"
         },
-        service_name = "System_Alarms",
+        service_name = "System_Alarms_${var.blueprint_id}",
         storage_schema_path = "aos.sdk.telemetry.schemas.iba_integer_data",
       }
   )
