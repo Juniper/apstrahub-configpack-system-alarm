@@ -5,14 +5,14 @@ resource "apstra_raw_json" "probe" {
   ]
   payload   = <<-EOT
   {
-      "label": "Systems Alarms",
+      "label": "${var.name}",
       "description": "",
       "processors": [
         {
           "name": "System_Alarms",
           "type": "extensible_data_collector",
           "properties": {
-            "service_name": "System_Alarms_${var.blueprint_id}",
+            "service_name": "${var.name}",
             "service_interval": "60",
             "value_map": {
               "value": {

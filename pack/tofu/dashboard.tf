@@ -1,7 +1,7 @@
 resource "apstra_raw_json" "ddos_dashboard" {
   url = format("/api/blueprints/%s/iba/dashboards",var.blueprint_id)
   payload = jsonencode({
-    label = "System Alarms",
+    label = "${var.name}",
     description = "",
     grid = [
       [
